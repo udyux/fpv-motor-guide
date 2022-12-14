@@ -1,0 +1,109 @@
+@use 'rem' as *;
+
+@mixin font-default {
+  font-family: Avenir, 'Helvetica Neue', Helvetica, arial, sans-serif;
+}
+
+@mixin type-body {
+  font-size: rem(16);
+  font-weight: 400;
+}
+
+@mixin type-body-bold {
+  font-size: rem(16);
+  font-weight: 500;
+}
+
+@mixin type-title {
+  font-size: rem(26);
+  font-weight: 700;
+
+  @media (--laptop) {
+    font-size: rem(36);
+  }
+}
+
+@mixin type-banner-large {
+  font-size: rem(30);
+  font-weight: 700;
+}
+
+@mixin type-banner {
+  font-size: rem(24);
+  font-weight: 700;
+}
+
+@mixin type-section {
+  font-size: rem(22);
+  font-weight: 700;
+}
+
+@mixin type-subtitle {
+  font-size: rem(20);
+  font-weight: 700;
+}
+
+@mixin type-header {
+  font-size: rem(18);
+  font-weight: 700;
+}
+
+@mixin type-subheader {
+  font-size: rem(16);
+  font-weight: 700;
+}
+
+@mixin type-text-bold {
+  font-size: rem(14);
+  font-weight: 900;
+}
+
+@mixin type-label-bold {
+  font-size: rem(14);
+  font-weight: 700;
+}
+
+@mixin type-label {
+  font-size: rem(14);
+  font-weight: 500;
+}
+
+@mixin type-text {
+  font-size: rem(14);
+  font-weight: 400;
+}
+
+@mixin type-label-small {
+  font-size: rem(13);
+  font-weight: 700;
+}
+
+@mixin type-tag {
+  font-size: rem(13);
+  font-weight: 500;
+}
+
+@mixin type-text-small {
+  font-size: rem(13);
+  font-weight: 400;
+}
+
+@mixin type-caption {
+  font-size: rem(12);
+  font-weight: 500;
+}
+
+@mixin type-legend {
+  font-size: rem(11);
+  font-weight: 900;
+}
+
+@mixin type-notification {
+  font-size: rem(10);
+  font-weight: 900;
+}
+
+@mixin type-notification-small {
+  font-size: rem(8);
+  font-weight: 900;
+}

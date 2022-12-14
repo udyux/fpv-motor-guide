@@ -1,0 +1,20 @@
+@use '../color';
+
+.pace {
+  pointer-events: none;
+  user-select: none;
+
+  &-inactive {
+    display: none;
+  }
+
+  .pace-progress {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+    background: color.hex(accent);
+    z-index: 2000;
+  }
+}

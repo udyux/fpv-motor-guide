@@ -1,0 +1,24 @@
+@function alpha($palette, $option: false, $alpha: false) {
+  $opacity: if($alpha, $alpha, if(type-of($option) == 'number', $option, 1));
+  $variant: if(not $option, default, if(type-of($option) == 'number', default, $option));
+  $nonDefaultVariant: if($variant == 'default', '', '-#{$variant}');
+  @return rgba(#{var(--#{$palette}#{$nonDefaultVariant}-rgb)}, $opacity);
+}
+
+@function hex($palette, $variant: default) {
+  $nonDefaultVariant: if($variant == 'default', '', '-#{$variant}');
+  @return var(--#{$palette}#{$nonDefaultVariant}-hex);
+}
+
+@mixin define($palettes) {
+  :root {
+    @each $paletteName, $paletteMap in $palettes {
+      @each $variant, $color in $paletteMap {
+        $nonDefaultVariant: if($variant == 'default', '', '-#{$variant}');
+
+        --#{$paletteName}#{$nonDefaultVariant}-hex: #{$color};
+        --#{$paletteName}#{$nonDefaultVariant}-rgb: #{red($color)},#{green($color)},#{blue($color)};
+      }
+    }
+  }
+}

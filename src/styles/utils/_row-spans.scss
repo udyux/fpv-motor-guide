@@ -1,0 +1,24 @@
+@use 'sass:math';
+
+@mixin row-spans($marginComp: 0) {
+  flex-shrink: 0;
+
+  @for $n from 1 to 13 {
+    $fraction: math.div($n, 12);
+    $percentage: percentage($fraction);
+    $width: if($marginComp, calc(#{$percentage} - #{$marginComp}), $percentage);
+
+    &.-span-#{$n} {
+      flex-grow: 0;
+      width: $width;
+    }
+
+    &.-skip-#{$n} {
+      margin-left: $width;
+    }
+  }
+
+  &.-fill {
+    flex-grow: 1;
+  }
+}

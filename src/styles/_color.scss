@@ -1,0 +1,31 @@
+@forward 'utils/palette' hide define;
+@use 'utils/palette';
+
+$palettes: (
+  "primary": (
+    lightest: #60c7ed,
+    light: #42b6e1,
+    lighter: #4faed0,
+    default: #2399c4,
+    darker: #0e2f4f,
+    dark: #072542,
+    darkest: #05192c,
+  ),
+  "status": (
+    default: #8697a7,
+    error: #e63946,
+    warn: #fdb05e,
+    success: #26bf80,
+  ),
+  "grey": (
+    lightest: #ebeef0,
+    light: #cbd4de,
+    lighter: #b8c3c9,
+    default: #8697a7,
+    darker: #737e8c,
+    dark: #4a5e73,
+    darkest: #345068,
+  ),
+);
+
+@include palette.define($palettes);

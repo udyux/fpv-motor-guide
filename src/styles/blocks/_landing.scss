@@ -1,0 +1,6 @@
+@use '../color';
+
+.landing {
+  height: 100%;
+  background-color: color.alpha(primary, 0.5);
+}

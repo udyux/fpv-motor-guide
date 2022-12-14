@@ -1,0 +1,15 @@
+@use '../utils' as *;
+@use '../color';
+
+body {
+  @include type-body;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  color: color.hex(grey, lightest);
+  background-color: color.hex(grey, darkest);
+
+  @media (--tablet) {
+    padding: rem(20);
+  }
+}

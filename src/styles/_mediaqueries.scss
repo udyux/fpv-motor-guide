@@ -1,0 +1,11 @@
+@use './utils' as *;
+
+@custom-media --only-phone (max-width: #{em(568)});
+@custom-media --phone-lg (min-width: #{em(568)});
+@custom-media --tablet (min-width: #{em(740)});
+@custom-media --only-mobile (max-width: #{em(1024)});
+@custom-media --laptop (min-width: #{em(1024)});
+@custom-media --laptop-lg (min-width: #{em(1160)});
+@custom-media --desktop (min-width: #{em(1360)});
+@custom-media --desktop-lg (min-width: #{em(1440)});
+@custom-media --monitor (min-width: #{em(1680)});
