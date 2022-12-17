@@ -1,4 +1,6 @@
-export type PropSize = { size: number; area: number };
+import { PropSize } from '@/types';
+
+export const defaultPropSize: PropSize = { size: 5, area: 499.41 };
 
 export const propSizes: PropSize[] = [
   { size: 2.5, area: 124.85 },
@@ -7,7 +9,7 @@ export const propSizes: PropSize[] = [
   { size: 4, area: 318.71 },
   { size: 4.5, area: 404.3 },
   { size: 4.9, area: 479.94 },
-  { size: 5, area: 499.41 },
+  defaultPropSize,
   { size: 5.1, area: 518.62 },
   { size: 5.25, area: 548.71 },
   { size: 5.5, area: 601.72 },

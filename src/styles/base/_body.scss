@@ -2,6 +2,7 @@
 @use '../color';
 
 body {
+  @include font-default;
   @include type-body;
   overflow-x: hidden;
   width: 100%;

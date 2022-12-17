@@ -2,6 +2,7 @@
   "name": "fpv-motor-guide",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "sprite": "node svgsprite",
     "serve": "node svgsprite && vue-cli-service serve",
