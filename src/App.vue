@@ -34,9 +34,8 @@
       <p class="result__output">{{ highestKv }}</p>
       <br />
       <br />
-      <p class="result__label">Motor</p>
-      <p class="result__output">{{ minMotorSize }}</p>
-      <p class="result__output">{{ maxMotorSize }}</p>
+      <p class="result__label">Motors</p>
+      <p v-for="motor in validMotors" :key="motor" class="result__output">{{ motor }}</p>
     </div>
   </main>
 </template>
@@ -55,6 +54,6 @@ const model: UserInputModel = reactive({
 });
 
 const { lowestKv, highestKv } = useKvRange(model);
-const { minMotorSize, maxMotorSize } = useMotorRange(model);
+const { validMotors } = useMotorRange(model);
 // const discLoad = computed(() => model.weight / model.prop.area);
 </script>
