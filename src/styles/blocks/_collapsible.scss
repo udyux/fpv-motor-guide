@@ -1,0 +1,36 @@
+@use '../utils' as *;
+
+.collapsible {
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: height 300ms cb();
+
+  &__content {
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translate3d(0, -1.25rem, 0);
+    pointer-events: none;
+    transition: transform 275ms cb(), opacity 150ms linear;
+
+    &::before,
+    &::after {
+      content: '';
+      display: table;
+    }
+
+    .collapsible.-show-more > & {
+      opacity: 1;
+      transform: translateZ(0);
+      pointer-events: auto;
+    }
+
+    .collapsible.-open > & {
+      opacity: 1;
+      transform: translateZ(0);
+      pointer-events: auto;
+      z-index: 1;
+      transition: transform 300ms cb(), opacity 175ms linear 100ms;
+    }
+  }
+}

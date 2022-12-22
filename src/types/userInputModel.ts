@@ -1,3 +1,4 @@
+import { Ref, ComputedRef } from 'vue';
 import { PropSize, QuadType, CellCount } from '@/types';
 
 export interface UserInputModel {
@@ -6,3 +7,5 @@ export interface UserInputModel {
   cellCount: CellCount;
   weight: number;
 }
+
+export type UserInputModelRef = Ref<UserInputModel> | ComputedRef<UserInputModel>;

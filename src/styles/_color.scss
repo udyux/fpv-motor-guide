@@ -1,7 +1,7 @@
 @forward 'utils/palette' hide define;
 @use 'utils/palette';
 
-$palettes: (
+$-palettes: (
   "primary": (
     lightest: #60c7ed,
     light: #42b6e1,
@@ -28,4 +28,4 @@ $palettes: (
   ),
 );
 
-@include palette.define($palettes);
+@include palette.define($-palettes);

@@ -1,0 +1,104 @@
+@use '../utils' as *;
+@use '../color' as *;
+
+.input-select {
+  &__label {
+    @include type-label;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__field {
+    position: relative;
+    width: 12rem;
+    height: 3rem;
+    border: 1px solid rgba(white, 0.8);
+    border-radius: rem(8);
+
+    &:hover {
+      border-color: white;
+    }
+  }
+
+  &__placeholder {
+    @include type-input;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.25rem;
+    opacity: 0.8;
+    text-align: left;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &__indicator {
+    position: absolute;
+    top: 50%;
+    right: 1.2rem;
+    width: rem(7);
+    height: rem(7);
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom-left-radius: 2px;
+    transform: translate3d(0, -50%, 0) scaleY(1) rotate(-45deg);
+    transition: transform 225ms cb(), border-color 80ms linear;
+
+    &.-close {
+      transform: translate3d(0, -50%, 0) scaleY(-1) rotate(-45deg);
+    }
+  }
+
+  &__tray {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 0 alpha(primary, darker, 0);
+    z-index: 1;
+
+    &.-open {
+      box-shadow: 0 0.25rem 0.5rem alpha(primary, darker, 0.05);
+    }
+  }
+
+  &__menu {
+    max-height: rem(240);
+    color: #333;
+    border-radius: 0.25rem;
+  }
+
+  &__entry {
+    border-bottom: 1px solid alpha(grey, light, 0.7);
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__option {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: rem(46);
+    padding: 0 rem(14);
+    transition: background-color 80ms linear;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: alpha(grey, lightest, 0.7);
+    }
+  }
+
+  .simplebar-track {
+    opacity: 0;
+  }
+}

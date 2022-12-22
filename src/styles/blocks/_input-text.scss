@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+.input-text {
+  @include type-input;
+
+  &__label {
+    @include type-label;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__field {
+    width: 12rem;
+    height: 3rem;
+    padding: 0.25rem 1.25rem;
+    border: 1px solid rgba(white, 0.8);
+    border-radius: rem(8);
+
+    &:hover {
+      border-color: white;
+    }
+  }
+}
