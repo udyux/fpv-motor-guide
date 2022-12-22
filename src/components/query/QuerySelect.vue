@@ -1,8 +1,8 @@
 <template>
   <div class="input-select">
-    <button v-if="label" class="input-select__label">
+    <span v-if="label" class="input-select__label">
       {{ label }}
-    </button>
+    </span>
 
     <div class="input-select__field" @click.stop>
       <button class="input-select__placeholder" @click="onClickLabel">
