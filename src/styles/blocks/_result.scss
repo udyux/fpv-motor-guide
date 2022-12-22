@@ -1,8 +1,19 @@
 @use '../utils' as *;
 
 .result {
+  line-height: 1.5;
+
   @media (--laptop) {
     width: calc(50% - 2rem);
+  }
+
+  &.-reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (--laptop) {
+      display: block;
+    }
   }
 
   & + & {
@@ -16,14 +27,20 @@
 
   &__title {
     @include type-subtitle;
-    margin-bottom: 1.5rem;
-  }
-
-  &__list {
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    line-height: 1;
   }
 
   &__output {
     @include type-output;
+  }
+
+  &__section + &__section {
+    margin-bottom: 4rem;
+
+    @media (--laptop) {
+      margin-top: 4rem;
+      margin-bottom: 0;
+    }
   }
 }

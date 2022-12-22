@@ -7,8 +7,8 @@ export default (model: UserInputModelRef) => {
 
   watchEffect(() => {
     const modelValue = unref(model);
-    const { offsets = [] } = modelValue.quadType;
-    const [minOffset = 3, maxOffset = 2] = offsets;
+    const { thrustOffsets = [] } = modelValue.quadType;
+    const [minOffset = 3, maxOffset = 2] = thrustOffsets;
     const minVolume = (modelValue.weight * (modelValue.quadType.thrustRatio - minOffset)) / 4;
     const maxVolume = (modelValue.weight * (modelValue.quadType.thrustRatio + maxOffset)) / 4;
 

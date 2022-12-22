@@ -10,11 +10,15 @@
 
   &__field {
     position: relative;
-    width: 12rem;
+    width: 100%;
     height: 3rem;
     border: 1px solid rgba(white, 0.8);
     border-radius: rem(8);
     transition: border-color 80ms linear;
+
+    @media (--laptop) {
+      width: 12rem;
+    }
 
     &:hover {
       border-color: white;
