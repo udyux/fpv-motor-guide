@@ -1,12 +1,12 @@
 <template>
-  <div class="input-select" @click.stop>
+  <div class="input-select">
     <button v-if="label" class="input-select__label">
       {{ label }}
     </button>
 
-    <div class="input-select__field">
+    <div class="input-select__field" @click.stop>
       <button class="input-select__placeholder" @click="onClickLabel">
-        {{ selected || placeholder || '' }}
+        {{ selectedLabel || selected || placeholder || '' }}
         <span class="input-select__indicator" :class="{ '-close': isOpen }" />
       </button>
 
@@ -65,6 +65,8 @@ const simplebarInstance = ref<SimpleBar | null>(null);
 const selected = computed(() => {
   return $route.query[props.queryKey] ? String($route.query[props.queryKey]) : null;
 });
+
+const selectedLabel = computed(() => props.options.find(({ value }) => String(value) === selected.value)?.label);
 
 watch(isOpen, (newValue: boolean, oldValue: boolean) => {
   if (newValue === oldValue) return;

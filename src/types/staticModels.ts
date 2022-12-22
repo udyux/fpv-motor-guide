@@ -9,6 +9,7 @@ export type QuadType = {
   label: string;
   thrustRatio: number;
   discLoad: number;
+  offsets?: [min: number, max: number];
 };
 
 export type PropSize = {

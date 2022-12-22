@@ -1,5 +1,10 @@
 .field {
   & + & {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+
+    @media (--laptop) {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
   }
 }

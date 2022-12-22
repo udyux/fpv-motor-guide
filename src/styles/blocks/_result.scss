@@ -1,0 +1,29 @@
+@use '../utils' as *;
+
+.result {
+  @media (--laptop) {
+    width: calc(50% - 2rem);
+  }
+
+  & + & {
+    margin-top: 2.5rem;
+
+    @media (--laptop) {
+      margin-top: 0;
+      margin-left: 4rem;
+    }
+  }
+
+  &__title {
+    @include type-subtitle;
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    line-height: 1.5;
+  }
+
+  &__output {
+    @include type-output;
+  }
+}

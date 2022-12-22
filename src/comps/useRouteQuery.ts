@@ -33,7 +33,7 @@ export default () => {
         if (numbers.includes(key)) return { ...queryParams, [key]: Number(value) };
         if (booleans.includes(key)) return { ...queryParams, [key]: String(value) === 'true' };
         if (arrays.includes(key)) return { ...queryParams, [key]: !Array.isArray(value) ? [value] : value };
-        return { ...queryParams, [key]: String(value) };
+        return { ...queryParams, [key]: Array.isArray(value) ? value : String(value) };
       }, {})
     );
   }

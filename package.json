@@ -39,6 +39,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "fs-extra": "^11.1.0",
+    "postcss-combine-media-query": "^1.0.1",
     "postcss-custom-media": "^9.0.1",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",

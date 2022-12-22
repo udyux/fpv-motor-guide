@@ -9,8 +9,4 @@ body {
   height: 100%;
   color: color.hex(grey, lightest);
   background-color: color.hex(grey, darkest);
-
-  @media (--tablet) {
-    padding: rem(20);
-  }
 }

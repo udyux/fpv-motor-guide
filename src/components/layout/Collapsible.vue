@@ -13,11 +13,11 @@ import Element from './Element';
 
 interface Props {
   isOpen: boolean;
-  tag: string;
-  contentTag: string;
-  contentClass: string | Record<string, unknown> | (string | Record<string, unknown>)[];
-  openHeight: string | number;
-  transitionKey: string | number | null;
+  tag?: string;
+  contentTag?: string;
+  contentClass?: string | Record<string, unknown> | (string | Record<string, unknown>)[];
+  openHeight?: string | number;
+  transitionKey?: string | number | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {

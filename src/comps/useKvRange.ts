@@ -1,5 +1,5 @@
 import { ref, watchEffect, unref } from 'vue';
-import { UserInputModelRef, UserInputModel } from '@/types';
+import { UserInputModelRef } from '@/types';
 import { roundTo } from '@/helpers';
 
 type KvMap = { kv: number; tipSpeed: number }[];
@@ -14,7 +14,7 @@ export default (model: UserInputModelRef) => {
   const kvMap = ref<KvMap>([]);
 
   watchEffect(() => {
-    const modelValue = unref<UserInputModel>(model);
+    const modelValue = unref(model);
     const initialKv = roundTo(12000 / (modelValue.cellCount.voltage * Math.PI * modelValue.prop.size * 0.0254), kvStep);
 
     kvMap.value = Array.from(Array(50), (_, index) => {
