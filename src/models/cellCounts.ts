@@ -1,4 +1,4 @@
-import { CellCount } from '@/types';
+import type { CellCount } from '@/types';
 
 export const cellCounts: CellCount[] = Array.from(Array(8), (_, index) => ({
   id: index + 1,

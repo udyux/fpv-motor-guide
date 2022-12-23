@@ -1,2 +1,2 @@
-export { default as Element } from './Element';
+export { default as DynamicElement } from './DynamicElement';
 export { default as Collapsible } from './Collapsible.vue';

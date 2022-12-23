@@ -1,4 +1,4 @@
-import { PropSize } from '@/types';
+import type { PropSize } from '@/types';
 
 export const defaultPropSize: PropSize = { id: 5, size: 5, label: '5"', area: 499.41 };
 

@@ -1,4 +1,4 @@
-import { MotorSize } from '@/types';
+import type { MotorSize } from '@/types';
 
 const baseMotorSizes = [
   { label: '1103', diameter: 11, height: 3, bearingDiameter: 9 },

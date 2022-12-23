@@ -1,4 +1,4 @@
-import { QuadType } from '@/types';
+import type { QuadType } from '@/types';
 
 export const defaultQuadType: QuadType = { id: 'freestyle', label: 'Freestyle', thrustRatio: 13, discLoad: 1.25 };
 

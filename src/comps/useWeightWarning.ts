@@ -1,6 +1,6 @@
 import { computed } from 'vue';
-import { UserInputModelRef } from '@/types';
 import { roundTo } from '@/helpers';
+import type { UserInputModelRef } from '@/types';
 
 enum WeightWarningType {
   Underweight = 'underweight',

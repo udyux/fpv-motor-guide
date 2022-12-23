@@ -1,3 +1,4 @@
+/* eslint-env node */
 const { resolve } = require('path');
 const fs = require('fs-extra');
 const svgStore = require('svgstore');

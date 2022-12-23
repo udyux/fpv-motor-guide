@@ -1,22 +1,20 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import { MainView, FullResultsView } from '../views';
 
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'main',
-    component: MainView,
-  },
-  {
-    path: '/full',
-    name: 'full',
-    component: FullResultsView,
-  },
-];
-
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'main',
+      component: MainView,
+    },
+    {
+      path: '/full',
+      name: 'full',
+      component: FullResultsView,
+    },
+  ],
 });
 
 export default router;

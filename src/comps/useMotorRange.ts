@@ -1,6 +1,6 @@
 import { ref, watchEffect, unref } from 'vue';
-import { UserInputModelRef } from '@/types';
 import { motorSizes } from '@/models';
+import type { UserInputModelRef } from '@/types';
 
 export default (model: UserInputModelRef) => {
   const validMotors = ref<string[]>([]);

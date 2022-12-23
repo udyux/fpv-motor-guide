@@ -1,6 +1,6 @@
 import { ref, watchEffect, unref } from 'vue';
-import { UserInputModelRef } from '@/types';
 import { roundTo } from '@/helpers';
+import type { UserInputModelRef } from '@/types';
 
 type KvMap = { kv: number; tipSpeed: number }[];
 

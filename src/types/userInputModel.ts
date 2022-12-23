@@ -1,5 +1,5 @@
-import { Ref, ComputedRef } from 'vue';
-import { PropSize, QuadType, CellCount } from '@/types';
+import type { Ref, ComputedRef } from 'vue';
+import type { PropSize, QuadType, CellCount } from '@/types';
 
 export interface UserInputModel {
   prop: PropSize;

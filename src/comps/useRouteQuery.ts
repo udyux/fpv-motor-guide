@@ -1,5 +1,6 @@
 import { computed } from 'vue';
-import { useRouter, useRoute, LocationQueryRaw, LocationQueryValueRaw } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
+import type { LocationQueryRaw, LocationQueryValueRaw } from 'vue-router';
 import _omit from 'lodash.omit';
 
 type CastQueryOptions = { arrays?: string[]; booleans?: string[]; numbers?: string[] };

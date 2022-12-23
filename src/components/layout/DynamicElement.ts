@@ -1,7 +1,7 @@
 import { defineComponent, h } from 'vue';
 
 export default defineComponent({
-  name: 'Element',
+  name: 'DynamicElement',
   props: {
     tag: { type: String, default: 'div' },
   },

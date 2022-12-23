@@ -64,7 +64,7 @@ import { computed, onBeforeMount } from 'vue';
 import { propSizes, defaultPropSize, quadTypes, defaultQuadType, cellCounts, defaultCellCount } from '@/models';
 import { useKvRange, useMotorRange, useWeightWarning, useRouteQuery } from '@/comps';
 import { QueryInput, QuerySelect } from '@/components/query';
-import { UserInputModel } from '@/types';
+import type { UserInputModel } from '@/types';
 
 const cellCountOptions = cellCounts.map(({ id, label }) => ({ label, value: id }));
 const quadTypeOptions = quadTypes.map(({ id, label }) => ({ label, value: id }));

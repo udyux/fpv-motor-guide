@@ -1,24 +1,31 @@
 <template>
-  <Element :is="tag" class="collapsible" :class="{ '-open': isOpen }" :style="style" @transitionend="onTransitionEnd">
-    <Element ref="contentNode" :tag="contentTag" class="collapsible__content" :class="contentClass">
+  <DynamicElement
+    :is="tag"
+    class="collapsible"
+    :class="{ '-open': isOpen }"
+    :style="style"
+    @transitionend="onTransitionEnd"
+  >
+    <DynamicElement ref="contentNode" :tag="contentTag" class="collapsible__content" :class="contentClass">
       <slot />
-    </Element>
-  </Element>
+    </DynamicElement>
+  </DynamicElement>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, nextTick, ComponentPublicInstance } from 'vue';
+import { ref, computed, watch, onMounted, nextTick } from 'vue';
+import type { ComponentPublicInstance } from 'vue';
 import { createLocalEventBus } from '@/utils';
-import Element from './Element';
+import DynamicElement from './DynamicElement';
 
-interface Props {
+type Props = {
   isOpen: boolean;
   tag?: string;
   contentTag?: string;
   contentClass?: string | Record<string, unknown> | (string | Record<string, unknown>)[];
   openHeight?: string | number;
   transitionKey?: string | number | null;
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
   tag: 'div',
