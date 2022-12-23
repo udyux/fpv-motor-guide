@@ -16,11 +16,10 @@ import { useRouteQuery } from '@/comps';
 import { MainForm, MainResults } from '@/components/main';
 import { UserInputModelFields } from '@/types';
 
-const { updateQuery, castQuery } = useRouteQuery();
-const query = castQuery<{ weight: number }>({ numbers: ['weight'] });
+const { $query, updateQuery } = useRouteQuery();
 
 const isFormComplete = computed(() =>
-  Object.values(UserInputModelFields).every(field => query.value[field] !== undefined)
+  Object.values(UserInputModelFields).every(field => $query.value[field] !== undefined)
 );
 
 onBeforeMount(() => {
@@ -29,7 +28,7 @@ onBeforeMount(() => {
     prop = defaultPropSize.id,
     quadType = defaultQuadType.id,
     cellCount = defaultCellCount.id,
-  } = query.value;
+  } = $query.value;
 
   updateQuery({ weight, prop, quadType, cellCount });
 });

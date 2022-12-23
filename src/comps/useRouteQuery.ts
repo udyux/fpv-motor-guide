@@ -8,6 +8,7 @@ type CastQueryOptions = { arrays?: string[]; booleans?: string[]; numbers?: stri
 export default () => {
   const $router = useRouter();
   const $route = useRoute();
+  const $query = computed(() => $route.query);
 
   function updateQueryKey(
     queryKey: string,
@@ -39,5 +40,5 @@ export default () => {
     );
   }
 
-  return { updateQuery, updateQueryKey, castQuery };
+  return { $query, updateQuery, updateQueryKey, castQuery };
 };
